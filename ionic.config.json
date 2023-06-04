@@ -1,0 +1,7 @@
+{
+  "name": "bolis-app",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
