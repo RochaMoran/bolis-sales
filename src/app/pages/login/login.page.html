@@ -5,39 +5,43 @@
     </ion-toolbar>
   </ion-header>
   <ion-content class="login">
-    <ion-grid class="login-content tilt-in-fwd-tr">
-      <ion-row class="login-row">
-        <ion-col size="12" class="login-logo__container">
-          <ion-img class="login-logo" src="assets/img/logo.png"></ion-img>
-        </ion-col>
-      </ion-row>
-      <ion-row class="login-row ion-margin">
-        <ion-col size="12" class="ion-text-center">
-          <ion-text class="login-title tilt-in-fwd-tr">Iniciar Sesión</ion-text>
-        </ion-col>
-      </ion-row>
-      <ion-row class="login-row">
-        <ion-col size="12">
-          <ion-item class="login-control">
-            <ion-label position="stacked">Nombre Usuario</ion-label>
-            <ion-input class="login-control__input" type="email" ></ion-input>
-          </ion-item>
-        </ion-col>
-      </ion-row>
-      <ion-row class="login-row">
-        <ion-col size="12">
-          <ion-item class="login-control">
-            <ion-label position="stacked">Contraseña</ion-label>
-            <ion-input class="login-control__input" [type]="passwordVisible ? 'text' : 'password'"></ion-input>
-            <ion-icon slot="end" class="ion-margin-top" [name]="passwordVisible ? 'eye-off' : 'eye'" (click)="togglePasswordVisibility()"></ion-icon>
-          </ion-item>
-        </ion-col>
-      </ion-row>
-      <ion-row class="login-row">
-        <ion-col size="12">
-          <ion-button class="login-submit" expand="expand">Iniciar Sesión</ion-button>
-        </ion-col>
-      </ion-row>
-    </ion-grid>
+    <form [formGroup]="formLogin" (ngSubmit)="login()">
+      <ion-grid class="login-content tilt-in-fwd-tr">
+        <ion-row class="login-row">
+          <ion-col size="12" class="login-logo__container">
+            <ion-img class="login-logo" src="assets/img/logo.png"></ion-img>
+          </ion-col>
+        </ion-row>
+        <ion-row class="login-row ion-margin">
+          <ion-col size="12" class="ion-text-center">
+            <ion-text class="login-title tilt-in-fwd-tr">Iniciar Sesión</ion-text>
+          </ion-col>
+        </ion-row>
+        <ion-row class="login-row">
+          <ion-col size="12">
+            <ion-item class="login-control">
+              <ion-label position="stacked">Nombre Usuario</ion-label>
+              <ion-input formControlName="username" class="login-control__input" type="email" ></ion-input>
+            </ion-item>
+            <app-message-form-control *ngIf="usernameInvalid" message="El nombre de usuario es requerido"></app-message-form-control>
+          </ion-col>
+        </ion-row>
+        <ion-row class="login-row">
+          <ion-col size="12">
+            <ion-item class="login-control">
+              <ion-label position="stacked">Contraseña</ion-label>
+              <ion-input formControlName="password" class="login-control__input" [type]="showPassword ? 'text' : 'password'"></ion-input>
+              <ion-icon slot="end" class="ion-margin-top" [name]="showPassword ? 'eye-off' : 'eye'" (click)="togglePasswordVisibility()"></ion-icon>
+            </ion-item>
+            <app-message-form-control *ngIf="passwordInvalid" message="La contraseña es requerida"></app-message-form-control>
+          </ion-col>
+        </ion-row>
+        <ion-row class="login-row">
+          <ion-col size="12">
+            <ion-button type="submit" class="login-submit" expand="expand">Iniciar Sesión</ion-button>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </form>
   </ion-content>
 </ion-content>
