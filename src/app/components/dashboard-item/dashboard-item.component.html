@@ -1,0 +1,99 @@
+<ion-row>
+  <ion-col
+    size="5.5"
+    class="item-dashboard ion-margin-horizontal"
+    (click)="navigate('/customers')"
+  >
+    <div>
+      <ion-text class="item-dashboard__title"> Clientes </ion-text>
+    </div>
+    <div>
+      <ion-icon
+        class="item-dashboard__icon"
+        name="people-circle-outline"
+      ></ion-icon>
+    </div>
+    <div class="ion-text-right">
+      <ion-text class="item-dashboard__total">
+        <span>30</span> Registros
+      </ion-text>
+    </div>
+  </ion-col>
+  <ion-col
+    size="5.5"
+    class="item-dashboard ion-margin-horizontal"
+    (click)="navigate('/products')"
+  >
+    <div class="">
+      <ion-text class="item-dashboard__title"> Productos </ion-text>
+    </div>
+    <div>
+      <ion-icon class="item-dashboard__icon" name="cube-outline"></ion-icon>
+    </div>
+    <div class="ion-text-right">
+      <ion-text class="item-dashboard__total"> Total <span>30</span> </ion-text>
+    </div>
+  </ion-col>
+  <ion-col
+    size="5.5"
+    class="item-dashboard ion-margin-horizontal"
+    (click)="navigate('/billing')"
+  >
+    <div class="">
+      <ion-text class="item-dashboard__title">Registrar Venta </ion-text>
+    </div>
+    <div>
+      <span class="item-dashboard__icon material-icons"> shopping_cart </span>
+    </div>
+    <div class="ion-text-right">
+      <ion-text class="item-dashboard__total"> Total <span>30</span> </ion-text>
+    </div>
+  </ion-col>
+  <ion-col
+    size="5.5"
+    class="item-dashboard ion-margin-horizontal"
+    (click)="navigate('/expenses')"
+  >
+    <div class="">
+      <ion-text class="item-dashboard__title">Registrar Gasto </ion-text>
+    </div>
+    <div>
+      <span class="item-dashboard__icon material-icons"> shopping_bag </span>
+    </div>
+    <div class="ion-text-right">
+      <ion-text class="item-dashboard__total"> Total <span>30</span> </ion-text>
+    </div>
+  </ion-col>
+  <ion-col
+    size="5.5"
+    class="item-dashboard ion-margin-horizontal"
+    (click)="navigate('/sales-report')"
+  >
+    <div class="">
+      <ion-text class="item-dashboard__title"> Reporte Ventas </ion-text>
+    </div>
+    <div>
+      <span class="item-dashboard__icon material-icons"> request_page </span>
+    </div>
+    <div class="ion-text-right">
+      <ion-text class="item-dashboard__total"> Total <span>30</span> </ion-text>
+    </div>
+  </ion-col>
+  <ion-col
+    size="5.5"
+    class="item-dashboard ion-margin-horizontal"
+    (click)="navigate('/sales-expenses')"
+  >
+    <div class="">
+      <ion-text class="item-dashboard__title"> Reporte Gastos </ion-text>
+    </div>
+    <div>
+      <span class="item-dashboard__icon material-icons">
+        content_paste_go
+      </span>
+    </div>
+    <div class="ion-text-right">
+      <ion-text class="item-dashboard__total"> Total <span>30</span> </ion-text>
+    </div>
+  </ion-col>
+</ion-row>
