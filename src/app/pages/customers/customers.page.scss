@@ -1,0 +1,33 @@
+.customers-list {
+    padding: 10px;
+    margin: 5px;
+    
+    & > ion-grid {
+        & > ion-row {
+            display: flex;
+            align-items: center;
+            border-bottom: 1px solid rgb(55, 55, 55);
+            
+            & > ion-col {
+                text-align: center;
+            }
+        }
+
+    }
+
+    @media screen and (min-width: 768px) {
+        padding: 20px;
+        margin: 10px;  
+    }
+}
+
+.customers-list__header {
+    background-color: #363636;
+    
+    & > ion-col {
+        padding: 15px;
+        border-left: 1px solid rgb(37, 37, 37);
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+}

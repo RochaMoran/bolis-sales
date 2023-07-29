@@ -1,13 +1,44 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>customers</ion-title>
+    <ion-title>Clientes</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">customers</ion-title>
-    </ion-toolbar>
-  </ion-header>
+  <ion-list class="customers-list">
+    <ion-grid>
+      <ion-row class="customers-list__header">
+        <ion-col size="4">
+          <ion-label>Nombre</ion-label>
+        </ion-col>
+        <ion-col size="3">
+          <ion-label>Usuario</ion-label>
+        </ion-col>
+        <ion-col size="3">
+          <ion-label>Teléfono</ion-label>
+        </ion-col>
+        <ion-col size="2">
+          <ion-label>Acciones</ion-label>
+        </ion-col>
+      </ion-row>
+      <ion-row
+        *ngFor="let customer of customers"
+      >
+          <ion-col size="4">
+            <ion-label>{{customer.name + "( " + customer.id +")"}}</ion-label>
+          </ion-col>
+          <ion-col size="3">
+            <p>{{customer.username}}</p>
+          </ion-col>
+          <ion-col size="3">
+            <p>{{customer.phone}}</p>
+          </ion-col>
+          <ion-col size="2" >
+            <ion-button (click)="openCustomer(customer)">
+              <ion-icon name="caret-forward-circle-outline"></ion-icon>
+            </ion-button>
+          </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-list>
 </ion-content>
