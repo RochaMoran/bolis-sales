@@ -1,0 +1,53 @@
+.dashboard-title {
+    padding: 10px;
+
+    & ion-text {
+        font-size: 24px;
+        font-weight: bold;
+
+        & .dashboard-title__username {
+            color: var(--ion-color-secondary);
+        }
+
+        & .dashboard-title__subtitle {
+            font-weight: normal;
+            font-size: 15px;
+            font-style: italic;
+            color: rgb(224, 224, 224);
+        }
+    }
+}
+
+.item-dashboard {
+    padding: 20px;
+    background-color: var(--ion-color-secondary);
+    border-radius: 20px;
+    color: black;
+    margin: 10px;
+    cursor: pointer;
+
+    & div  {
+
+        & .item-dashboard__title {
+            font-size: 20px;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+
+        & .item-dashboard__icon {
+            font-size: 40px;
+            margin: 0;
+        }
+
+        & .item-dashboard__total {
+            font-size: 18px;
+            color: rgb(40, 40, 40);
+            
+            & span {
+                font-size: 25px;
+                font-weight: bold;
+                color: black;
+            }
+        }
+    }
+}
